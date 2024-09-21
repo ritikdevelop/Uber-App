@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb239bf-a79f-4d0f-a3f1-cbebb5080442" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Uber-App.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/uber-clone/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber-clone/app/(tabs)/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/uber-clone/app/(tabs)/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber-clone/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/uber-clone/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber-clone/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/uber-clone/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uber-clone/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/uber-clone/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uber-clone/app/(auth)/welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/uber-clone/app/(auth)/welcome.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +18,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2mNvBgEhmDoeqcnJtr9rccRj3az" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,7 +43,8 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "F:\\Uber-App\\uber-clone\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "F:\\Uber-App\\uber-clone\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,6 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1726929815560</updated>
       <workItem from="1726929859757" duration="634000" />
+      <workItem from="1726944492792" duration="192000" />
     </task>
     <servers />
   </component>
