@@ -1,22 +1,19 @@
-import { useSignIn } from "@clerk/clerk-expo";
-import { Link, router } from "expo-router";
-import { useCallback, useState } from "react";
-import { Alert, Image, ScrollView, Text, View } from "react-native";
-
 import CustomButton from "@/components/CustomButton";
 import InputField from "@/components/InputField";
 import OAuth from "@/components/OAuth";
 import { icons, images } from "@/constants";
+import { Link } from "expo-router";
+import React, { useState } from "react";
+import { Text, View, ScrollView, Image } from "react-native";
 
 const SignIn = () => {
-  const { signIn, setActive, isLoaded } = useSignIn();
-
   const [form, setForm] = useState({
+    name: "",
     email: "",
     password: "",
   });
 
- 
+  const onSignInPress = async () => {};
 
   return (
     <ScrollView className="flex-1 bg-white">
@@ -33,37 +30,36 @@ const SignIn = () => {
             label="Email"
             placeholder="Enter email"
             icon={icons.email}
-            textContentType="emailAddress"
             value={form.email}
             onChangeText={(value) => setForm({ ...form, email: value })}
           />
-
           <InputField
             label="Password"
-            placeholder="Enter password"
+            placeholder="Enter your password"
             icon={icons.lock}
             secureTextEntry={true}
-            textContentType="password"
             value={form.password}
             onChangeText={(value) => setForm({ ...form, password: value })}
           />
 
           <CustomButton
-            title="Sign In"
+            title="Sign Up"
             onPress={onSignInPress}
             className="mt-6"
           />
 
+          {/* OAuth */}
+
           <OAuth />
 
-          <Link
-            href="/sign-up"
-            className="text-lg text-center text-general-200 mt-10"
-          >
-            Don't have an account?{" "}
-            <Text className="text-primary-500">Sign Up</Text>
+          <Link href="/sign-up"
+          className="tex-lg text-center text-general-200 mt-10">
+            <Text>Don't have an account?</Text>
+            <Text className="text-primary-500"> Sign up</Text>
           </Link>
         </View>
+
+        {/* Verification Modal */}
       </View>
     </ScrollView>
   );
