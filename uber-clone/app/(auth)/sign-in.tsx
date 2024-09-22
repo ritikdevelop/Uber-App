@@ -43,7 +43,7 @@ const SignIn = () => {
           />
 
           <CustomButton
-            title="Sign Up"
+            title="Sign In"
             onPress={onSignInPress}
             className="mt-6"
           />
