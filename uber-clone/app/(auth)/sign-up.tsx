@@ -57,6 +57,7 @@ const SignUp = () => {
       });
 
       if (completeSignUp.status === "complete") {
+
         //! Create a Database User!
         await setActive({ session: completeSignUp.createdSessionId });
         setVerification({ ...verification, state: "success" });
@@ -118,7 +119,7 @@ const SignUp = () => {
             className="mt-6"
           />
 
-          {/* OAuth Modal */}
+          {/*//! OAuth Modal */}
           <OAuth />
 
           <Link
@@ -130,18 +131,16 @@ const SignUp = () => {
           </Link>
         </View>
 
-        {/* Verification Modal */}
+        {/* //! Verification Modal */}
 
         <ReactNativeModal
           isVisible={verification.state === "pending"}
-          // onBackdropPress={() =>
-          //   setVerification({ ...verification, state: "default" })
-          // }
-          onModalHide={() => {
-            if (verification.state === "success") {
-              setShowSuccessModal(true);
-            }
-          }}
+
+          onModalHide={() => setVerification({
+            ...verification,
+            state: "success"
+          })
+          }
         >
           <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
             <Text className="font-JakartaExtraBold text-2xl mb-2">
@@ -175,7 +174,7 @@ const SignUp = () => {
             />
           </View>
         </ReactNativeModal>
-        <ReactNativeModal isVisible={showSuccessModal}>
+        <ReactNativeModal isVisible={verification.state === "success"}>
           <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
             <Image
               source={images.check}
@@ -193,7 +192,7 @@ const SignUp = () => {
             <CustomButton
               title="Browse Home"
               onPress={() => {
-                setShowSuccessModal(false);
+                //todo setShowSuccessModal(false);
                 router.push(`/(root)/(tabs)/home`);
               }}
               className="mt-5"

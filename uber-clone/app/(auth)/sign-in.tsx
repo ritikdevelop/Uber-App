@@ -9,9 +9,8 @@ import { Text, View, ScrollView, Image } from "react-native";
 
 
 const SignIn = () => {
-
-  const { signIn, setActive, isLoaded } = useSignIn()
-  const router = useRouter()
+  const { signIn, setActive, isLoaded } = useSignIn();
+  const router = useRouter();
 
   const [form, setForm] = useState({
     name: "",
@@ -21,25 +20,25 @@ const SignIn = () => {
 
   const onSignInPress = useCallback(async () => {
     if (!isLoaded) {
-      return
+      return;
     }
 
     try {
       const signInAttempt = await signIn.create({
         identifier: form.email,
         password: form.password,
-      })
+      });
 
-      if (signInAttempt.status === 'complete') {
-        await setActive({ session: signInAttempt.createdSessionId })
-        router.replace('/')
+      if (signInAttempt.status === "complete") {
+        await setActive({ session: signInAttempt.createdSessionId });
+        router.replace("/");
       } else {
-        console.error(JSON.stringify(signInAttempt, null, 2))
+        console.error(JSON.stringify(signInAttempt, null, 2));
       }
     } catch (err: any) {
-      console.error(JSON.stringify(err, null, 2))
+      console.error(JSON.stringify(err, null, 2));
     }
-  }, [isLoaded, form.email, form.password])
+  }, [isLoaded, form.email, form.password]);
 
   return (
     <ScrollView className="flex-1 bg-white">
@@ -74,18 +73,20 @@ const SignIn = () => {
             className="mt-6"
           />
 
-          {/* OAuth */}
+          {/* //! OAuth */}
 
           <OAuth />
 
-          <Link href="/sign-up"
-          className="tex-lg text-center text-general-200 mt-10">
+          <Link
+            href="/sign-up"
+            className="tex-lg text-center text-general-200 mt-10"
+          >
             <Text>Don't have an account?</Text>
             <Text className="text-primary-500"> Sign up</Text>
           </Link>
         </View>
 
-        {/* Verification Modal */}
+        {/* //! Verification Modal */}
       </View>
     </ScrollView>
   );
