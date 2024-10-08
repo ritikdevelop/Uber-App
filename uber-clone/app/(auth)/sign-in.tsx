@@ -7,7 +7,6 @@ import { Link, useRouter } from "expo-router";
 import React, { useCallback, useState } from "react";
 import { Text, View, ScrollView, Image } from "react-native";
 
-
 const SignIn = () => {
   const { signIn, setActive, isLoaded } = useSignIn();
   const router = useRouter();
