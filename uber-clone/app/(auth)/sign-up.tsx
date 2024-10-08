@@ -57,7 +57,7 @@ const SignUp = () => {
       });
 
       if (completeSignUp.status === "complete") {
-
+        
         //! Create a Database User!
         await setActive({ session: completeSignUp.createdSessionId });
         setVerification({ ...verification, state: "success" });
@@ -69,9 +69,12 @@ const SignUp = () => {
         });
       }
     } catch (err: any) {
+      console.error("Verification error:", err);
+      const errorMessage =
+        err?.errors?.[0]?.longMessage || "An unexpected error occurred";
       setVerification({
         ...verification,
-        error: err.errors[0].longMessage,
+        error: errorMessage,
         state: "failed",
       });
     }
@@ -135,11 +138,11 @@ const SignUp = () => {
 
         <ReactNativeModal
           isVisible={verification.state === "pending"}
-
-          onModalHide={() => setVerification({
-            ...verification,
-            state: "success"
-          })
+          onModalHide={() =>
+            setVerification({
+              ...verification,
+              state: "success",
+            })
           }
         >
           <View className="bg-white px-7 py-9 rounded-2xl min-h-[300px]">
